@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mofcomposer.FXMLDocumentController">
+   <children>
+      <ListView fx:id="notelist" layoutX="14.0" layoutY="14.0" prefHeight="278.0" prefWidth="200.0" />
+      <Button layoutX="14.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#btn_listentonote_clicked" prefHeight="25.0" prefWidth="76.0" text="♫ Note" />
+      <Button layoutX="913.0" layoutY="336.0" mnemonicParsing="false" onMouseClicked="#btn_microtonal_clicked" text="Microtonal" />
+      <Button layoutX="912.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#btn_makeitup_clicked" text="Make it up!" />
+      <ListView fx:id="chordlist" layoutX="222.0" layoutY="14.0" prefHeight="278.0" prefWidth="200.0" />
+      <TextArea fx:id="console" layoutX="429.0" layoutY="14.0" prefHeight="278.0" prefWidth="559.0" />
+      <Button layoutX="100.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#btn_listentochord_clicked" prefHeight="25.0" prefWidth="114.0" text="♫ Listen to Chord" />
+      <Button layoutX="222.0" layoutY="336.0" mnemonicParsing="false" onMouseClicked="#btn_addtochordlist_clicked" prefHeight="25.0" prefWidth="156.0" text="+ Add to Chord List" />
+      <ChoiceBox fx:id="setduration" layoutX="13.0" layoutY="408.0" prefHeight="25.0" prefWidth="76.0" />
+      <ChoiceBox fx:id="setchordtype" layoutX="13.0" layoutY="336.0" prefHeight="25.0" prefWidth="76.0" />
+      <ChoiceBox fx:id="setoctave" layoutX="13.0" layoutY="372.0" prefHeight="25.0" prefWidth="76.0" />
+      <Button layoutX="222.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#btn_listentoallchords_clicked" text="♫ Listen to All Chords" />
+      <Button layoutX="429.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#btn_generate0_clicked" prefHeight="25.0" prefWidth="210.0" text="Generate Random Melody" />
+      <Button layoutX="429.0" layoutY="372.0" mnemonicParsing="false" onMouseClicked="#btn_savelastmelody_clicked" text="Save Last Melody" />
+      <TextArea fx:id="music" layoutX="14.0" layoutY="485.0" prefHeight="251.0" prefWidth="405.0" />
+      <Button layoutX="430.0" layoutY="336.0" mnemonicParsing="false" onMouseClicked="#btn_listentomusic_clicked" text="♫ Listen to the Music" />
+      <Button layoutX="222.0" layoutY="372.0" mnemonicParsing="false" onMouseClicked="#btn_removeselectedchords_clicked" text="- Remove Selected Chords" />
+      <Button layoutX="574.0" layoutY="336.0" mnemonicParsing="false" onMouseClicked="#btn_stopplayer_clicked" prefHeight="25.0" prefWidth="65.0" text="⮾ Stop" />
+      <ChoiceBox fx:id="setscale" layoutX="13.0" layoutY="446.0" prefHeight="25.0" prefWidth="76.0" />
+      <Button layoutX="100.0" layoutY="446.0" mnemonicParsing="false" onMouseClicked="#btn_listentoscale_clicked" prefHeight="25.0" prefWidth="114.0" text="♫ Scale" />
+      <ChoiceBox fx:id="chordnos" layoutX="222.0" layoutY="408.0" prefHeight="25.0" prefWidth="156.0" />
+      <Button layoutX="222.0" layoutY="446.0" mnemonicParsing="false" onMouseClicked="#btn_listenchordno_clicked" prefHeight="25.0" prefWidth="156.0" text="♫ Listen to Chord No" />
+      <TextArea fx:id="rhythm" layoutX="429.0" layoutY="485.0" prefHeight="54.0" prefWidth="559.0" />
+      <Button layoutX="429.0" layoutY="446.0" mnemonicParsing="false" onMouseClicked="#btn_rhythm_generate" text="Generate Rhythm" />
+      <Button layoutX="753.0" layoutY="446.0" mnemonicParsing="false" onMouseClicked="#btn_rhythm_listen" prefHeight="25.0" prefWidth="109.0" text="Listen to Rhythm" />
+      <Button layoutX="876.0" layoutY="446.0" mnemonicParsing="false" onMouseClicked="#btn_rhythm_save" prefHeight="25.0" prefWidth="109.0" text="Save Rhythm" />
+      <GridPane fx:id="rhythmgrid" gridLinesVisible="true" hgap="1.0" layoutX="429.0" layoutY="550.0" prefHeight="186.0" prefWidth="559.0" style="-fx-border-color: #AA1155; -fx-background-color: #CCCCCC, #445566; -fx-background-insets: 0, 0 1 1 0;" vgap="1.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding>
+      </GridPane>
+   </children>
+</AnchorPane>
